@@ -17,6 +17,7 @@ body {
 	font-weight: 400;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	color: #222;
+	overflow: hidden;
 }
 
 /* Grid
@@ -872,3 +873,133 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 
 
+
+
+
+.selector {
+    position: absolute;
+    right: 7%;
+    bottom: 14%;
+    width: 140px;
+    height: 140px;
+    margin-top: -70px;
+    margin-left: -70px;
+}
+
+.selector, .selector button {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+
+
+  
+
+}
+
+.selector button {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  background: #428bca;
+  border-radius: 20%;
+  border: 0;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  transition: all .1s;
+  top: 23%;
+  left:23%;
+}
+
+.selector button:hover {
+  box-shadow: 0 0 50px #3071a9;
+}
+
+.selector button:focus {
+  outline: none;
+}
+
+.selector ul {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.selector li {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  margin: 0 50%;
+  -webkit-transform: rotate(-360deg);
+  transition: all 0.8s ease-in-out;
+}
+
+.selector li input {
+  display: none;
+}
+
+.selector li input + label {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  line-height: 1px;
+  margin-left: 0;
+  background: transparent;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+  color: white;
+}
+
+.selector li input + label:hover {
+  background: #f0f0f0;
+}
+
+.selector li input:checked + label {
+  background: #5cb85c;
+  color: white;
+}
+
+.selector li input:checked + label:hover {
+  background: #449d44;
+}
+
+.selector.open li input + label {
+    width: 100px;
+    height: 80px;
+    line-height: 30px;
+    /*margin-left: -40px;*/
+    /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); */
+    background: transparent;
+    font-size: 14px;
+
+}
+
+i.fa.fa-camera, 
+i.fa.fa-users, 
+i.fa.fa-calendar,
+i.fa.fa-music,
+i.fa.fa-user,
+i.fa.fa-credit-card,
+i.fa.fa-video-camera,
+i.fa.fa-ticket {
+    padding-top: 15% !important;
+    color: white;
+}
+
+
+.selector.open li input + label:hover {
+    text-shadow: 0 0 20px white;
+    transition: .3s ease;
+}
