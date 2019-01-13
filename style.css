@@ -379,7 +379,16 @@ header {
 }
 
 header {
-	background-position: 55% 100%;
+	background-size: 65%;
+}
+
+.container01 {
+	font-size: .8em;
+}
+
+.selector {
+	right: 31% !important;
+	bottom: 15% !important;
 }
 
 
