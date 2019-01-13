@@ -375,11 +375,38 @@ header {
 @media only screen and (max-width: 500px) {
 
 .title {
-	margin-top: -50%;
+	margin-top: -100%;
+}
+
+body {
+	overflow: hidden !important;
+}
+
+.selector.open li input + label:hover {
+	display: block;
 }
 
 header {
-	background-size: 65%;
+	background-size: cover;
+}
+
+.container01 h1 {
+  /* font-family: 'Audiowide', cursive; */
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 0 4px 5px rgba(60,72,96,.5);
+  color: #f0edf2;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+	  text-shadow: rgb(255, 255, 255) 0px 0px 0px,
+    rgb(255, 255, 255) 0px 0px 7px,
+    rgb(255, 255, 255) 0px 0px 1px, 
+    rgb(0, 51, 128) 0px 0px 0px, 
+    rgb(0, 51, 128) 0px 0px 10px;
 }
 
 .container01 {
@@ -387,8 +414,13 @@ header {
 }
 
 .selector {
+	height: unset !important;
 	right: 31% !important;
 	bottom: 15% !important;
+}
+
+button {
+	padding: 20% 0;
 }
 
 
@@ -971,8 +1003,9 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   color: white;
 }
 
-.selector li input + label:hover {
-  background: #f0f0f0;
+.selector.open li input + label:hover {
+    text-shadow: 0 0 20px white;
+    transition: .3s ease;
 }
 
 .selector li input:checked + label {
@@ -980,8 +1013,9 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
   color: white;
 }
 
-.selector li input:checked + label:hover {
-  background: #449d44;
+.selector.open li input + label:hover {
+    text-shadow: 0 0 20px white;
+    transition: .3s ease;
 }
 
 .selector.open li input + label {
